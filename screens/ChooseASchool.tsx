@@ -4,17 +4,21 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 import { RootStackParamList } from '../types';
 
-export default function NotFoundScreen({
+export default function ChooseASchool({
   navigation,
-}: StackScreenProps<RootStackParamList, 'NotFound'>) {
+}: StackScreenProps<RootStackParamList, 'ChooseASchool'>) {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>This screen doesn't exist.</Text>
+      <Text style={styles.title}>Choose a School.</Text>
       <TouchableOpacity
-        onPress={() => navigation.replace('ChooseASchool')}
+        onPress={() =>
+          navigation.navigate('ChooseAClass', {
+            school: { id: 1, name: 'Confitec Legacy' },
+          })
+        }
         style={styles.link}
       >
-        <Text style={styles.linkText}>Go to home screen!</Text>
+        <Text style={styles.title}>Go to choose a class.</Text>
       </TouchableOpacity>
     </View>
   );

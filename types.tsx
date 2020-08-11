@@ -1,17 +1,26 @@
 export type RootStackParamList = {
-  Root: undefined;
+  ChooseASchool: undefined;
+  ChooseAClass: ChooseAClassParams;
+  ChooseASubject: ChooseASubjectParams;
+  StudentsDashboard: StudentsDashboardParams;
   NotFound: undefined;
 };
 
-export type BottomTabParamList = {
-  TabOne: undefined;
-  TabTwo: undefined;
-};
-
-export type TabOneParamList = {
-  TabOneScreen: undefined;
-};
-
-export type TabTwoParamList = {
-  TabTwoScreen: undefined;
-};
+export interface ChooseAClassParams {
+  school: {
+    id: number;
+    name: string;
+  };
+}
+export interface ChooseASubjectParams extends ChooseAClassParams {
+  class: {
+    id: number;
+    name: string;
+  };
+}
+export interface StudentsDashboardParams extends ChooseASubjectParams {
+  subject: {
+    id: number;
+    name: string;
+  };
+}

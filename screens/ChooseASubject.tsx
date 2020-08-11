@@ -4,17 +4,24 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 import { RootStackParamList } from '../types';
 
-export default function NotFoundScreen({
+export default function ChooseASubject({
   navigation,
-}: StackScreenProps<RootStackParamList, 'NotFound'>) {
+  route,
+}: StackScreenProps<RootStackParamList, 'ChooseASubject'>) {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>This screen doesn't exist.</Text>
+      <Text style={styles.title}>Choose a Subject</Text>
       <TouchableOpacity
-        onPress={() => navigation.replace('ChooseASchool')}
+        onPress={() =>
+          navigation.navigate('StudentsDashboard', {
+            school: route.params.school,
+            class: route.params.class,
+            subject: { id: 6, name: 'Inglês' },
+          })
+        }
         style={styles.link}
       >
-        <Text style={styles.linkText}>Go to home screen!</Text>
+        <Text style={styles.linkText}>Go to students dashboard</Text>
       </TouchableOpacity>
     </View>
   );
