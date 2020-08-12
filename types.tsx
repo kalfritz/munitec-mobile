@@ -29,3 +29,7 @@ export type Subject = {
   name: string;
   image: string;
 };
+export type Student = {
+  id: number;
+  name: string;
+};
