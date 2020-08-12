@@ -14,3 +14,33 @@ export const Title = styled.Text`
   font-weight: bold;
   text-align: center;
 `;
+export const Header = styled.View`
+  padding: 5px;
+  padding-top: 0px;
+  margin: 5px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+`;
+export const HeaderName = styled.Text`
+  font-size: 20px;
+  font-weight: bold;
+  color: #111;
+  margin-left: 10px;
+`;
+export const HeaderBemesters = styled.View`
+  padding: 5px;
+  padding-right: 0px;
+  margin-left: 2px;
+  color: #111;
+  flex-direction: row;
+  align-items: center;
+`;
+
+export const HeaderBemester = styled.Text`
+  text-align: center;
+  font-size: 18px;
+  margin-left: 2px;
+  padding: 2px 2px;
+  color: #111;
+`;

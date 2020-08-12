@@ -32,4 +32,11 @@ export type Subject = {
 export type Student = {
   id: number;
   name: string;
+  scores: {
+    firstBemester: number;
+    secondBemester: number;
+    thirdBemester: number;
+    fourthBemester: number;
+    finalScore: number;
+  };
 };
