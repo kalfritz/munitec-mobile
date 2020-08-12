@@ -27,7 +27,7 @@ function RootNavigator() {
       screenOptions={{
         headerShown: true,
         headerStyle: {
-          backgroundColor: '#f4511e',
+          backgroundColor: 'blueviolet',
         },
         headerTintColor: '#fff',
         headerTitleStyle: {

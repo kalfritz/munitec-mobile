@@ -7,20 +7,25 @@ export type RootStackParamList = {
 };
 
 export interface ChooseAClassParams {
-  school: {
-    id: number;
-    name: string;
-  };
+  school: School;
 }
 export interface ChooseASubjectParams extends ChooseAClassParams {
-  class: {
-    id: number;
-    name: string;
-  };
+  class: Class;
 }
 export interface StudentsDashboardParams extends ChooseASubjectParams {
-  subject: {
-    id: number;
-    name: string;
-  };
+  subject: Subject;
 }
+export type School = {
+  id: number;
+  name: string;
+  image: string;
+};
+export type Class = {
+  id: number;
+  name: string;
+};
+export type Subject = {
+  id: number;
+  name: string;
+  image: string;
+};
